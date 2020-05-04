@@ -52,12 +52,20 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+function sumAndMultiply(d, e, f) { //eslint-disable-line
+  var sums = sum(d, e);
+  sums = sum(sums[0], f);
+  
+  var products = multiply(d, e);
+  products = multiply(products[0], f);
+  
+  var string = d + ' and ' + e + ' and ' + f + ' sum to ' + sums[0] + '.';
+  var stringsagain = 'The product of ' + d + ' and ' + e + ' and ' + f + ' is ' + products[0] + '.';
+  
+  return [sums[0], products[0], string, stringsagain];
 }
-
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -102,7 +110,7 @@ function multiplyArray(multArr) { //eslint-disable-line
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
